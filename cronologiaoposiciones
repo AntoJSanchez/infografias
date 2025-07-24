@@ -1,1 +1,447 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crisis Oposiciones Docentes Andalucía 2025</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F4F4F4;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 350px;
+            max-height: 400px;
+        }
+        @media (max-width: 768px) {
+            .chart-container {
+                height: 300px;
+            }
+        }
+        .kpi-card {
+            background-color: #FFFFFF;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+            padding: 1.5rem;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .timeline-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 18px;
+            height: 100%;
+            width: 4px;
+            background: #FFB400;
+        }
+        @media (min-width: 768px) {
+            .timeline-container::before {
+                left: 50%;
+                margin-left: -2px;
+            }
+        }
+    </style>
+</head>
+<body class="text-[#2D3142]">
 
+    <div class="container mx-auto p-4 md:p-8 max-w-7xl">
+
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-6xl font-black text-[#00A6ED] mb-2">Oposiciones Docentes Andalucía 2025</h1>
+            <p class="text-xl md:text-2xl font-bold">Crónica de un Proceso Controvertido</p>
+        </header>
+
+        <div class="max-w-4xl mx-auto mb-12 text-lg text-center">
+            <p>A principios de 2025, la Junta de Andalucía anunció una convocatoria de oposiciones que fue presentada como una oportunidad histórica para la estabilización del empleo docente. Sin embargo, lo que comenzó como una promesa de futuro se convirtió rápidamente en una fuente de enorme tensión. La magnitud de la oferta, sin una coordinación estatal, desató el temor a un "efecto llamada" que amenazaba la estabilidad de miles de interinos andaluces, creando un clima de incertidumbre que sentaría las bases de la crisis posterior.</p>
+        </div>
+
+        <section id="macro-oposicion" class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2">Una "Macro-Oposición" de Doble Filo</h2>
+                <p class="max-w-3xl mx-auto text-lg">La Junta de Andalucía lanzó una oferta de plazas histórica para estabilizar la plantilla docente. Sin embargo, esta medida generó un "efecto llamada" que sembró la incertidumbre y el miedo entre miles de interinos andaluces, quienes temían perder sus puestos ante la llegada masiva de aspirantes de otras comunidades.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                <div class="kpi-card">
+                    <span class="text-6xl font-black text-[#7FB800]">4.401</span>
+                    <span class="text-xl font-bold mt-2">Plazas para Maestros</span>
+                    <p class="mt-1">La cifra más alta en años, centrando la atención en el Cuerpo de Maestros.</p>
+                </div>
+                <div class="kpi-card">
+                    <span class="text-6xl font-black text-[#FFB400]">>7.800</span>
+                    <span class="text-xl font-bold mt-2">Plazas Totales</span>
+                    <p class="mt-1">Una oferta global sin precedentes en el sistema educativo andaluz.</p>
+                </div>
+                <div class="kpi-card">
+                    <span class="text-6xl font-black text-[#F6511D]">>41.000</span>
+                    <span class="text-xl font-bold mt-2">Aspirantes</span>
+                    <p class="mt-1">Decenas de miles de personas se inscribieron, aumentando la competencia.</p>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-4xl mx-auto mb-12 text-lg text-center">
+            <p>El 21 de junio, día fijado para la primera prueba, marcó el punto de inflexión. Las expectativas de miles de opositores, que habían invertido años de esfuerzo, chocaron con una realidad de desorganización y caos. La jornada, lejos de ser un ejercicio de equidad y rigor, se convirtió en un compendio de despropósitos que evidenciaron un fracaso sistémico en la planificación y ejecución por parte de la Administración, transformando la esperanza en indignación.</p>
+        </div>
+
+        <section id="colapso-logistico" class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2">21 de Junio: Crónica de un Colapso Logístico</h2>
+                <p class="max-w-3xl mx-auto text-lg">La jornada del examen, que debía ser un ejercicio de rigor y equidad, se convirtió en un caos sistémico. Los fallos no fueron incidentes aislados, sino un patrón de incompetencia que afectó a múltiples sedes y tribunales en toda la comunidad.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-xl mb-3 text-center">Fallo Logístico Generalizado</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-2xl mr-3">📋</span><div><span class="font-bold">Falta de copias:</span> Al menos 7 tribunales sin exámenes suficientes.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">⏳</span><div><span class="font-bold">Retrasos masivos:</span> Esperas de hasta 60 minutos sin explicación en sedes de Málaga, Sevilla o Cádiz.</div></li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-xl mb-3 text-center">Errores Críticos en Exámenes</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-2xl mr-3">⁉️</span><div><span class="font-bold">Enunciados deficientes:</span> Errores en Química, Matemáticas y un polémico caso práctico en Pedagogía Terapéutica (PT).</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">📊</span><div><span class="font-bold">Datos omitidos:</span> En Gestión Comercial faltaba el tipo de cambio euro/dólar, añadido 30 min tarde.</div></li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-xl mb-3 text-center">Condiciones Inhumanas</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-2xl mr-3">🌡️</span><div><span class="font-bold">Calor insoportable:</span> Denunciado por CCOO y CSIF, dificultando la concentración de miles de aspirantes.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🚫</span><div><span class="font-bold">Protocolos rotos:</span> Se negó a una opositora con la menstruación ir al baño, un hecho de extrema gravedad.</div></li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-xl mb-3 text-center">Sospechas de Filtración</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start"><span class="text-2xl mr-3">🌐</span><div><span class="font-bold">Exámenes en internet:</span> Academias publicaron soluciones mientras los opositores seguían encerrados en las aulas.</div></li>
+                        <li class="flex items-start"><span class="text-2xl mr-3">🤔</span><div><span class="font-bold">Ventaja indebida:</span> Se generó una enorme indignación y sospechas de trato de favor, minando la credibilidad del proceso.</div></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-4xl mx-auto mb-12 text-lg text-center">
+            <p>Superado el desastre logístico del examen, la crisis mutó hacia un caos administrativo. La Consejería, en lugar de mostrar empatía y flexibilidad, aplicó los criterios de exclusión con un rigorismo extremo y, a menudo, contradictorio. Esta fase, bautizada por los sindicatos como la "gincana de invalidaciones", sumió a los aspirantes en una profunda inseguridad jurídica, donde un formalismo absurdo podía anular años de preparación, generando una justificada sensación de arbitrariedad e injusticia.</p>
+        </div>
+
+        <section id="gincana-invalidaciones" class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2">La Gincana de Invalidaciones: Un Criterio Inconsistente</h2>
+                <p class="max-w-3xl mx-auto text-lg">Tras el caos del examen, la administración aplicó un rigorismo extremo y arbitrario. Se invalidaron exámenes por formalismos absurdos en la fase escrita, para luego mostrar una sorprendente flexibilidad en la fase oral, generando una profunda sensación de injusticia.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="font-bold text-xl mb-3 text-center text-[#F6511D]">FASE ESCRITA: Rigor Extremo</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">❌</span>
+                            <div>
+                                <p class="font-bold">El "Cuerpo de Maestros"</p>
+                                <p>Cientos de exámenes invalidados por no incluir esta frase literal en la portada, una decisión que tuvo que ser revertida por su posible inconstitucionalidad.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">❌</span>
+                            <div>
+                                <p class="font-bold">Caza de Faltas de Ortografía</p>
+                                <p>Tribunales que aplicaron criterios de penalización por ortografía de forma desproporcionada y no homogénea.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                     <h3 class="font-bold text-xl mb-3 text-center text-[#7FB800]">FASE ORAL: Tolerancia Sorprendente</h3>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <span class="text-2xl mr-3">✅</span>
+                            <div>
+                                <p class="font-bold">Validación de Portadas</p>
+                                <p>Se dio orden a los tribunales de ser flexibles y validar las portadas de las programaciones didácticas aunque tuvieran errores formales.</p>
+                            </div>
+                        </li>
+                         <li class="flex items-start">
+                            <span class="text-2xl mr-3">✅</span>
+                            <div>
+                                <p class="font-bold">Incomprensión General</p>
+                                <p>Los opositores no entendieron por qué un error formal en un examen escrito era motivo de exclusión, pero un error similar en la programación no lo era.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <div class="max-w-4xl mx-auto mb-12 text-lg text-center">
+            <p>La gestión de la crisis por parte de la Consejería de Educación evidenció una profunda brecha entre la realidad del caos y el discurso oficial. Mientras la Administración intentaba proyectar una imagen de normalidad, la acumulación de errores e injusticias provocó una reacción contundente. Sindicatos, partidos de la oposición y los propios afectados se unieron en un frente común, cada uno desde su ámbito, para denunciar la situación y exigir responsabilidades.</p>
+        </div>
+
+        <section id="brecha-respuesta" class="mb-16">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold mb-2">La Brecha entre el Caos y la Respuesta: Un Frente Común</h2>
+                <p class="max-w-3xl mx-auto text-lg">La enorme disparidad entre la gravedad de los fallos y la tibia respuesta oficial provocó la movilización de sindicatos y partidos, que alzaron la voz para denunciar la situación y defender a los aspirantes.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold mb-4 text-center">Disparidad: Incidencias vs. Reacción</h3>
+                    <div class="chart-container">
+                        <canvas id="incidentsChart"></canvas>
+                    </div>
+                    <p class="mt-4 text-sm text-center">El gráfico de radar muestra la brecha entre la gravedad de las incidencias (azul) y la respuesta inicial de la administración (naranja), que minimizó los problemas.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-bold text-center mb-4">Actores Clave en la Protesta</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">📢</span>
+                            <div>
+                                <p class="font-bold">CCOO y CSIF</p>
+                                <p class="text-sm">Denuncias en medios de comunicación, comunicados exigiendo "soluciones inmediatas" y calificando el proceso de "gincana de invalidaciones".</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">🏛️</span>
+                            <div>
+                                <p class="font-bold">Adelante Andalucía</p>
+                                <p class="text-sm">Ofensiva parlamentaria con una "batería de preguntas" para la consejera, denunciando una "organización nefasta y cutre".</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <span class="text-3xl mr-4">💻</span>
+                            <div>
+                                <p class="font-bold">Opositores y Afectados</p>
+                                <p class="text-sm">Movilización en foros (Maestros25, Sindicato PIDE) para compartir información, coordinar quejas y expresar el sentimiento de "pucherazo" e "injusticia".</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start">
+                            <span class="text-3xl mr-4">📄</span>
+                            <div>
+                                <p class="font-bold">Sindicatos Minoritarios (DXP, IIDEA)</p>
+                                <p class="text-sm">Convocatoria de huelgas y concentraciones para protestar contra las "injusticias y la precariedad laboral".</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="max-w-4xl mx-auto mb-12 text-lg text-center">
+            <p>Para comprender la magnitud de la crisis, es fundamental visualizar la secuencia completa de los acontecimientos. La siguiente cronología reconstruye, paso a paso, cómo un proceso que debía ser ejemplar se fue desmoronando. Desde los primeros temores de los interinos hasta las rectificaciones forzadas por la presión social y jurídica, cada hito revela un patrón de gestión reactiva que erosionó por completo la confianza en el sistema.</p>
+        </div>
+
+        <section id="cronologia-crisis" class="mb-16">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-2">Cronología de una Crisis Anunciada</h2>
+                <p class="max-w-3xl mx-auto text-lg">La secuencia de eventos revela un patrón de fallos sistémicos y una gestión reactiva que erosionó la confianza en el proceso desde el primer día.</p>
+            </div>
+            <div class="relative timeline-container mx-auto">
+                <div class="timeline-item mb-8 flex items-center w-full">
+                    <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 mr-8 md:mr-0 md:ml-auto">
+                        <h4 class="font-bold text-lg mb-1 text-gray-700">La Paradoja de la Estabilidad</h4>
+                        <p class="text-sm">La política de "macro-oposiciones" sin coordinación estatal creó una paradoja: una medida diseñada para dar estabilidad al sistema educativo andaluz se convirtió en la mayor fuente de inestabilidad y ansiedad para los miles de docentes interinos que ya formaban parte de él, temiendo ser desplazados por aspirantes de otras regiones.</p>
+                    </div>
+                    <div class="z-10 flex items-center order-1 bg-[#00A6ED] shadow-xl w-10 h-10 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">📢</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-8 md:ml-0 md:mr-auto">
+                        <p class="text-sm font-medium text-[#00A6ED]">Febrero - Marzo</p>
+                        <h3 class="font-bold text-lg mb-1">Temor al "ERE Encubierto"</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Tras la convocatoria, los interinos denuncian el "efecto llamada". ANPE habla de "incertidumbre insostenible" y se teme un desplazamiento masivo.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item mb-8 flex flex-row-reverse md:flex-row items-center w-full">
+                     <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-8 md:ml-0 md:mr-auto">
+                        <h4 class="font-bold text-lg mb-1 text-gray-700">Rigorismo Administrativo Extremo</h4>
+                        <p class="text-sm">Esta exclusión masiva, ocurrida un mes antes del examen, fue la primera gran demostración de la inflexible cultura administrativa de la Consejería. Se aplicó la norma de forma tajante, sin considerar los posibles fallos técnicos o errores humanos en un trámite telemático, sentando un precedente de rigor que generó una enorme desconfianza.</p>
+                    </div>
+                    <div class="z-10 flex items-center order-1 bg-[#F6511D] shadow-xl w-10 h-10 rounded-full">
+                        <h1 class="mx-auto text-lg font-semibold text-white">🚫</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 mr-8 md:mr-0 md:ml-auto">
+                        <p class="text-sm font-medium text-[#F6511D]">19 de Mayo</p>
+                        <h3 class="font-bold text-lg mb-1">Exclusión Masiva por Trámite</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">La Consejería excluye a 6.173 aspirantes (cálculo de CSIF) por no entregar la programación didáctica, aplicando la norma con máxima rigidez.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item mb-8 flex items-center w-full">
+                    <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 mr-8 md:mr-0 md:ml-auto">
+                        <h4 class="font-bold text-lg mb-1 text-gray-700">Fracaso Sistémico</h4>
+                        <p class="text-sm">Los incidentes no fueron aislados. La falta de copias, los errores en enunciados de varias especialidades y las condiciones ambientales deficientes dibujaron un patrón de incompetencia sistémica. La contradicción entre el rigor exigido a los opositores y la ineficacia de la organización fue la principal fuente de indignación.</p>
+                    </div>
+                    <div class="z-10 flex items-center order-1 bg-[#F6511D] shadow-xl w-10 h-10 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">🔥</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-8 md:ml-0 md:mr-auto">
+                        <p class="text-sm font-medium text-[#F6511D]">21 de Junio</p>
+                        <h3 class="font-bold text-lg mb-1">El Día del Colapso</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Caos logístico generalizado. CCOO lamenta la "falta de humanidad" y CSIF denuncia el "calor insoportable" en las aulas.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item mb-8 flex flex-row-reverse md:flex-row items-center w-full">
+                    <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-8 md:ml-0 md:mr-auto">
+                        <h4 class="font-bold text-lg mb-1 text-gray-700">Defensa Institucional</h4>
+                        <p class="text-sm">La respuesta inicial de la Administración fue negar la mayor. El discurso de "normalidad" y "ajuste a la norma" chocó frontalmente con los miles de testimonios de afectados. Esta postura, en lugar de calmar los ánimos, fue percibida como una falta de respeto y avivó la indignación, uniendo a sindicatos y oposición en su crítica.</p>
+                    </div>
+                    <div class="z-10 flex items-center order-1 bg-[#FFB400] shadow-xl w-10 h-10 rounded-full">
+                        <h1 class="mx-auto text-lg font-semibold text-white">🗣️</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 mr-8 md:mr-0 md:ml-auto">
+                        <p class="text-sm font-medium text-[#FFB400]">Finales de Junio</p>
+                        <h3 class="font-bold text-lg mb-1">Fase de Negación</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">La Consejería afirma que "todo va sobre ruedas" y que el proceso "se ajusta a la norma", desestimando las quejas y las impugnaciones.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item mb-8 flex items-center w-full">
+                    <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 mr-8 md:mr-0 md:ml-auto">
+                        <h4 class="font-bold text-lg mb-1 text-gray-700">Rectificación Forzada</h4>
+                        <p class="text-sm">La marcha atrás en el caso del "Cuerpo de Maestros" no fue un acto de buena voluntad, sino una rectificación forzada. Un informe de los propios servicios jurídicos de la Junta advirtió que la exclusión masiva por un formalismo tan trivial podía vulnerar derechos constitucionales, obligando a la Consejería a revertir una decisión que nunca debió tomarse.</p>
+                    </div>
+                    <div class="z-10 flex items-center order-1 bg-[#00A6ED] shadow-xl w-10 h-10 rounded-full">
+                        <h1 class="mx-auto font-semibold text-lg text-white">⚖️</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-8 md:ml-0 md:mr-auto">
+                        <p class="text-sm font-medium text-[#00A6ED]">Principios de Julio</p>
+                        <h3 class="font-bold text-lg mb-1">La Gran Rectificación</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">Forzada por un informe jurídico interno, la Junta "repesca" a opositores. CSIF exige "acciones urgentes para reparar los perjuicios".</p>
+                    </div>
+                </div>
+
+                 <div class="timeline-item mb-8 flex flex-row-reverse md:flex-row items-center w-full">
+                    <div class="order-1 bg-gray-100 rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 ml-8 md:ml-0 md:mr-auto">
+                        <h4 class="font-bold text-lg mb-1 text-gray-700">Intento de Silenciar la Crítica</h4>
+                        <p class="text-sm">El expediente a un docente por difundir una carta crítica en WhatsApp fue el episodio más oscuro. La intervención de la Fiscalía, que apreció indicios de "represalia", sugirió un intento de la Administración por acallar las voces disidentes, trascendiendo la mala gestión para entrar en un terreno de posible vulneración de la libertad de expresión.</p>
+                    </div>
+                    <div class="z-10 flex items-center order-1 bg-[#F6511D] shadow-xl w-10 h-10 rounded-full">
+                        <h1 class="mx-auto text-lg font-semibold text-white">🤫</h1>
+                    </div>
+                    <div class="order-1 bg-white rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4 mr-8 md:mr-0 md:ml-auto">
+                        <p class="text-sm font-medium text-[#F6511D]">Mediados de Julio</p>
+                        <h3 class="font-bold text-lg mb-1">Silencio ante la Represalia</h3>
+                        <p class="text-sm leading-snug tracking-wide text-gray-900 text-opacity-100">La Consejería evita valorar la sanción a un docente crítico, un caso que la Fiscalía vio como una posible "represalia" por sus opiniones.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            const CHAR_LIMIT = 20;
+
+            const wrapLabel = (label, limit) => {
+                const words = label.split(' ');
+                const lines = [];
+                let currentLine = '';
+                words.forEach(word => {
+                    if ((currentLine + ' ' + word).length > limit) {
+                        lines.push(currentLine);
+                        currentLine = word;
+                    } else {
+                        currentLine += (currentLine === '' ? '' : ' ') + word;
+                    }
+                });
+                lines.push(currentLine);
+                return lines;
+            };
+            
+            const TOOLTIP_CONFIG = {
+                plugins: {
+                    tooltip: {
+                        callbacks: {
+                            title: function(tooltipItems) {
+                                const item = tooltipItems[0];
+                                let label = item.chart.data.labels[item.dataIndex];
+                                if (Array.isArray(label)) {
+                                  return label.join(' ');
+                                }
+                                return label;
+                            }
+                        }
+                    }
+                }
+            };
+
+            const incidentsCtx = document.getElementById('incidentsChart').getContext('2d');
+            const incidentsLabels = [
+                'Caos Logístico (21 Junio)', 
+                'Errores en Exámenes', 
+                'Exclusiones por Formalismos',
+                'Fallos Plataformas Técnicas',
+                'Falta de Transparencia'
+            ];
+            new Chart(incidentsCtx, {
+                type: 'radar',
+                data: {
+                    labels: incidentsLabels.map(l => wrapLabel(l, CHAR_LIMIT)),
+                    datasets: [{
+                        label: 'Gravedad Denunciada',
+                        data: [9, 8, 9, 7, 8],
+                        fill: true,
+                        backgroundColor: 'rgba(0, 166, 237, 0.2)',
+                        borderColor: '#00A6ED',
+                        pointBackgroundColor: '#00A6ED',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#00A6ED'
+                    }, {
+                        label: 'Respuesta Institucional Inicial',
+                        data: [2, 3, 2, 5, 3],
+                        fill: true,
+                        backgroundColor: 'rgba(246, 81, 29, 0.2)',
+                        borderColor: '#F6511D',
+                        pointBackgroundColor: '#F6511D',
+                        pointBorderColor: '#fff',
+                        pointHoverBackgroundColor: '#fff',
+                        pointHoverBorderColor: '#F6511D'
+                    }]
+                },
+                options: {
+                    maintainAspectRatio: false,
+                    ...TOOLTIP_CONFIG,
+                    scales: {
+                        r: {
+                            angleLines: {
+                                color: '#ccc'
+                            },
+                            grid: {
+                                color: '#ddd'
+                            },
+                            pointLabels: {
+                                font: {
+                                    size: 12
+                                },
+                                color: '#2D3142'
+                            },
+                            ticks: {
+                                backdropColor: '#F4F4F4',
+                                color: '#666'
+                            },
+                             min: 0,
+                             max: 10
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
